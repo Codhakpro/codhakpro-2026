@@ -1,0 +1,313 @@
+/* Responsive Stylesheet for Mobile and Desktop Compatibility */
+
+body {
+    background-color: #f4f4f4;
+    font: 16px/1.5 Arial, sans-serif; /* Adjusted base font size for better mobile readability */
+    margin: 0;
+    padding: 0;
+}
+
+.everything {
+    width: 90%; /* Slightly wider on mobile for better space usage */
+    margin: 0 auto;
+    padding: 0 10px; /* Add padding for mobile edges */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    background-color: rgb(49, 63, 73);
+    color: white;
+    padding: 20px 0; /* Use padding instead of fixed height for flexibility */
+    border-bottom: 5px solid rgb(55, 109, 171);
+}
+
+#brand {
+    margin: 0;
+    text-align: center; /* Center on mobile */
+}
+
+header li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+header a:hover {
+    color: aquamarine;
+    font-weight: bold;
+}
+
+header .logo, header .current a {
+    color: aqua;
+    font-weight: bold;
+}
+
+header a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px; /* Smaller on mobile */
+}
+
+header nav {
+    text-align: center; /* Center nav on mobile */
+    margin-top: 10px;
+}
+
+.introduction {
+    background-image: url(../IMG/service2.jpg);
+    min-height: 300px; /* Smaller on mobile */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #f4f4f4;
+    border-bottom: 5px solid rgb(55, 109, 171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding for mobile */
+}
+
+#bluring {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%; /* Full width on mobile */
+    color: #ffffff;
+    font-size: 18px; /* Smaller on mobile */
+}
+
+.intro {
+    background: rgba(134, 133, 133, 0.16);
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    margin: 0;
+    padding: 20px; /* Reduced padding on mobile */
+    border-radius: 20px;
+    max-width: 100%; /* Full width on mobile */
+    width: 100%;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.689);
+}
+
+#newsletter {
+    background-color: rgb(49, 63, 73);
+    color: #f4f4f4;
+    padding: 20px 0; /* Use padding instead of fixed height */
+}
+
+#newsletter H2 {
+    font-size: 24px; /* Smaller on mobile */
+    margin: 0 0 10px 0;
+    text-align: center; /* Center on mobile */
+}
+
+#newsletter form {
+    text-align: center; /* Center form on mobile */
+}
+
+#newsletter input {
+    padding: 8px;
+    width: 100%; /* Full width on mobile */
+    max-width: 250px; /* Limit on desktop */
+    height: 20px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.suscribe_btn {
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: rgb(109, 177, 201);
+    border: solid rgb(170, 212, 225) 2px;
+    border-radius: 2.5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#myservice {
+    padding: 20px 0;
+}
+
+.myskill {
+    width: 100%; /* Full width on mobile */
+    text-align: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.myskill img {
+    max-width: 100%; /* Responsive images */
+    height: auto;
+}
+
+article#about_us {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 20px;
+}
+
+aside#sidebar {
+    width: 100%; /* Full width on mobile */
+}
+
+.dark {
+    background: rgb(49, 63, 73);
+    border-radius: 10px;
+    padding: 15px;
+    color: #f4f4f4;
+}
+
+.bebold {
+    font-weight: bolder;
+    font-size: 24px; /* Smaller on mobile */
+}
+
+.dark form input, textarea {
+    padding: 8px;
+    width: 100%; /* Full width on mobile */
+    box-sizing: border-box;
+}
+
+#service li {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: rgb(221, 227, 227);
+}
+
+footer {
+    background-color: rgb(17, 27, 30);
+    padding: 20px;
+    text-align: center;
+    color: aqua;
+    font-style: italic;
+}
+
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+    .everything {
+        width: 80%;
+        padding: 0;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    #brand {
+        float: left;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    header nav {
+        float: right;
+        margin-top: 10px;
+        text-align: right;
+    }
+
+    header li {
+        padding: 0 20px;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    .introduction {
+        min-height: 400px;
+        padding: 40px 0;
+    }
+
+    #bluring {
+        font-size: 22px;
+        max-width: 860px;
+    }
+
+    .intro {
+        padding: 50px 40px;
+        max-width: 940px;
+    }
+
+    #newsletter H2 {
+        font-size: 28px;
+        float: left;
+        margin: 40px 0 0 20px;
+        text-align: left;
+    }
+
+    #newsletter form {
+        float: right;
+        margin: 42px 20px 0 0;
+        text-align: left;
+    }
+
+    #newsletter input {
+        width: 250px;
+    }
+
+    .suscribe_btn {
+        margin-top: 0;
+    }
+
+    #myservice {
+        margin-top: 5px;
+        margin-left: -15px;
+    }
+
+    .myskill {
+        float: left;
+        width: 30%;
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+
+    .myskill img {
+        height: 100px;
+        width: auto;
+    }
+
+    article#about_us {
+        float: left;
+        width: 65%;
+        margin-bottom: 0;
+    }
+
+    aside#sidebar {
+        float: right;
+        width: 30%;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .bebold {
+        font-size: 30px;
+    }
+
+    .dark form input, textarea {
+        width: 250px;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    .everything {
+        width: 80%;
+    }
+
+    .introduction {
+        min-height: 500px;
+    }
+
+    #bluring {
+        max-width: 860px;
+    }
+
+    .intro {
+        max-width: 940px;
+    }
+}

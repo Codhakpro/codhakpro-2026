@@ -1,0 +1,490 @@
+/* make box-sizing consistent across elements so padding doesn't grow boxes */
+/* *, *::before, *::after {
+    box-sizing: border-box;
+} */
+
+body{
+    background-color: #f4f4f4;
+    font: 15.5px/1.5 Arial, courier, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.everything{
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+header ul{
+    margin: 0 auto;
+    display: flex;
+}
+
+
+header{
+    padding: 10px 0;
+    background-color: rgb(49, 63, 73);
+    color: white;
+    max-height: 110px;
+    border-bottom: 5px solid rgb(55, 109, 171);
+    text-align: center;
+    
+}
+
+#brand{
+    float: left;
+    
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 30px 20px;
+}
+
+ header a:hover{
+    color: aquamarine;
+    font-weight: bold;
+}
+
+
+header .logo, header .current a{
+    color: aqua;
+    font-weight: bold;
+}
+
+/* You can always use the element 'INHERENT' to inherit a feature from a parent class */
+
+header a{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+header nav{
+    float: right;
+    z-index: 1000;
+    
+}
+
+/*Harms Burger menu*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+} 
+
+ .introduction{
+    background-image: url(../IMG/service2.jpg);
+    min-height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #f4f4f4;
+    border-bottom: 5px solid rgb(55, 109, 171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+#bluring{ 
+    text-align: center;
+    margin: 0 auto;
+    max-width: 860px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+/* blurring background */
+.intro{
+    background: rgba(134, 133, 133, 0.16);
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-radius: 20px;
+    max-width: 980px;
+    width: 100%;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.689);
+}
+
+#newsletter{
+    background-color: rgb(49, 63, 73);
+    color: #f4f4f4;
+    height: 115px;
+    box-sizing: border-box;
+}
+#newsletter H2{
+    font-size: 28px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+#newsletter form{
+    float: right;
+    margin-top: 42px;
+    margin-right: 20px;
+}
+#newsletter input{
+    padding: 4px;
+    width: 250px;
+    height: 20px;   
+}
+.suscribe_btn{
+    padding: 6.5px;
+    width: 100px;
+    color: #ffffff;
+    background-color: rgb(109, 177, 201);
+    border: solid rgb(170, 212, 225) 2px;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+#myservice{
+    margin-top: 5px;
+}
+#service{
+    padding-right: 50px;
+}
+.myskill{
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 3%;
+    font-size: 15px;
+    /* box-sizing: border-box; */
+}
+
+article#about_us{
+    float: left;
+    width: 65%;
+}
+aside#sidebar{
+    margin-top: 20px;
+    margin-left: 0; /* avoid adding fixed px that can overflow percentage widths */
+    float: right;
+    width: 32%;
+}
+aside#sidebars{
+    margin-top: 20px;
+    margin-left: 0;
+    /* avoid adding fixed px that can overflow percentage widths */
+    float: right;
+    width: 32%;
+}
+
+.dark{
+    background: rgb(49, 63, 73);
+    border-radius: 10px;
+    padding: 15px 16px;
+    color: #f4f4f4
+}
+
+.bebold{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.dark form input,
+.dark form textarea{
+    padding: 5px;
+    width: 95%;
+}
+#service li{
+    border:  solid 1px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    background-color: rgb(221, 227, 227);
+    overflow: hidden;
+}
+
+footer{
+    background-color: rgb(17, 27, 30);
+    padding: 20px;
+    text-align: center;
+    color: aqua;
+    font-style: italic;
+}
+.myskill img {
+    border-radius: 20px;
+}
+/* .component {
+    color: var(--bs-gray-800);
+    background-color: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-200);
+    border-radius: .25rem;
+}
+
+.component-header {
+    color: var(--bs-purple);
+} */
+ @media (max-width: 768px) {
+     .hamburger {
+         display: flex;
+     }
+
+     header nav {
+         position: absolute;
+         top: 100px;
+         right: 0;
+         width: 100%;
+         background-color: rgb(49, 63, 73);
+         display: none;
+         z-index: 1000;
+     }
+
+     header nav.active {
+         display: block;
+     }
+
+     nav ul {
+         flex-direction: column;
+     }
+
+     header li {
+         float: none;
+         display: block;
+         padding: 15px 20px;
+         border-bottom: 5px solid rgb(55, 109, 171);
+     }
+
+     .myskill {
+         float: none;
+         width: 100%;
+         margin-left: 0;
+         margin-bottom: 20px;
+     }
+
+     article#about_us {
+         float: none;
+         width: 100%;
+         
+     }
+
+     aside#sidebars {
+         float: none;
+         width: 88%;
+         margin-left: 6%;
+         margin-bottom: 20px;
+        
+     }
+    aside#sidebar {
+        float: none;
+        width: 100%;
+    }
+
+     .everything {
+         width: 95%;
+     }
+    #bluring H1 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    #newsletter {
+        max-height: 115px;
+    }
+
+    #newsletter H2 {
+        font-size: 24px;
+        padding: 15px 0 10px 60px;
+        margin: 0 auto;
+    }
+
+    #newsletter form {
+        margin: 0 auto;
+        padding-right: 90px;
+    }
+
+    #newsletter input {
+        padding: 15px 100px;
+        width: 0;
+        height: 0;
+    }
+    .myskill {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+        border-radius: 15px;
+        background-color: antiquewhite;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+ 
+ /* .intro {
+     padding: 10px 20px;
+     width: 90%;
+ }
+ header{
+    height: 80px;
+ } */
+
+
+}
+
+/* For Very small Phone */
+@media (max-width: 480px) {
+    .everything {
+            width: 95%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+    header {
+        max-height: 85px;
+        border-bottom: 5px solid rgb(55, 109, 171);
+        text-align: center;
+        display: flex;
+    }
+    header .logo, header #brand{
+        padding-top: 10px;
+        font-size: 27px;
+        }
+    #bluring {
+        text-align: center;
+        margin: 0 auto;
+        color: #ffffff;
+        font-size: 20px;
+        
+    }
+   #bluring H1{
+        font-weight: bold;
+        font-size: 28px;
+    } 
+    .introduction{
+        border-bottom: 5px solid rgb(55, 109, 171);
+    }
+    #newsletter {
+        max-height: 115px;
+    }
+
+    #newsletter H2 {
+        font-size: 24px;
+        padding: 15px 0 10px 30px;
+        margin: 0 auto;
+    }
+
+    #newsletter form {
+        margin: 0 auto;
+        padding-right: 70px;
+    }
+
+    #newsletter input {
+        padding: 15px 100px;
+        width: 0;
+        height: 0;
+    }
+    .myskill {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+        border-radius: 15px;
+        background-color: antiquewhite;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    aside#sidebar {
+        float: none;
+        width: 100%;
+    }
+    
+    
+}
+
+/* For Tablet */
+@media (min-width: 769px) and (max-width: 1024px){
+    header li {
+        display: flex;
+        padding: 30px 10px;
+        font-weight: bold;
+    }
+    #newsletter H2 {
+        margin-top: 0;
+        padding-top: 35px;
+        margin-left: 0;
+        font-size: 26px;
+    }
+
+    #newsletter form {
+        margin-top: 0;
+        padding-top: 40px;
+        margin-right: 0;
+    }
+
+    #newsletter input {
+        padding: 15px 100px;
+        width: 0;
+        height: 0;
+        
+    }
+
+    .suscribe_btn {
+        width: 100px;
+    }
+    .myskill {
+        float: none;
+        width: 70%;
+        margin: 20px auto;
+        font-size: 16px;
+        justify-items: center;
+    }
+    img{
+        height: 300px;
+        width: 300px;
+    }
+    
+    article#about_us {
+        float: none;
+        width: 100%;
+    }
+
+    aside#sidebars {
+        margin-top: 20px;
+        margin-left: 4%;
+        float: none;
+        width: 90%;
+    }
+    aside#sidebar {
+        float: none;
+        width: 100%;
+    }
+
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <div class="everything">
+            <div>
+                <h1 id="brand"><span class="logo">Codhak Pro </span>Web Design</h1>
+            </div>
+    
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="service.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="newsletter">
+        <div class="everything">
+            <h2>Subscribe to our newsletter</h2>
+            
+            <form action="https://codhak.com">
+                <input type="email" placeholder="Enter email..." required>
+                <button type="submit" class="suscribe_btn">Suscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="offers">
+        <div class="everything">
+            <article id="about_us">           
+                <h1>Services</h1>
+                    <ul id="service">
+                        <li>
+                            <h3>Website design</h3>
+                            <p>We create custom websites focused on user experience and measurable results. Our design process includes wireframes, visual mockups, and iterative feedback so the final product aligns with your brand and goals.</p>
+                            <p>Pricing: $1000 - $3000</p>
+                        </li>
+                        <li>
+                            <h3>Website Maintenance</h3>
+                            <p>Keep your site secure and up-to-date with our monthly maintenance plans. We provide backups, security patches, content updates, and performance optimizations so your site runs smoothly.</p>
+                            <p>Pricing: $250 per month</p>
+                        </li>
+                        <li>
+                            <h3>Website hosting</h3>
+                            <p>Reliable managed hosting with daily backups, SSL certificates, and 24/7 monitoring. We handle server maintenance so you can focus on your business.</p>
+                            <p>Pricing: $25 per month</p>
+                        </li>
+                    </ul>
+            </article><br>
+            <aside id="sidebars">
+                <div class="dark">
+                    <h3>Get a quote</h3>
+                    <form action="https://codhak.com">
+                        <div>
+                            <label for="Name">Name</label><br>
+                            <input type="text" name="Name" placeholder="Name" required>
+                        </div><br>
+                        <div>
+                            <label for="Email">Email</label><br>
+                            <input type="email" name="Email" placeholder="E-mail address" required>
+                        </div><br>
+                        <div>
+                            <label for="Text">Message</label><br>
+                            <textarea placeholder="Send Us a Message?" name="Text"></textarea>
+                        </div><br>
+                        <div>
+                            <button class="suscribe_btn" type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <br><footer>
+        <p>Codhak Pro Web Design, copyright &copy; 2026</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
