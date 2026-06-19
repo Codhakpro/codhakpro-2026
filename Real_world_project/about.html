@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+</head>
+<body>
+    <header>
+        <div class="everything">
+            <div>
+                <h1 id="brand"><span class="logo">Codhak Pro </span>Web Design</h1>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li class="current"><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section id="newsletter">
+        <div class="everything">
+            <h2>Subscribe to our newsletter</h2>
+            <form action="https://codhak.com">
+                <input type="email" placeholder="Enter Email..." required>
+                <button type="submit" class="suscribe_btn" >Suscribe</button>
+            </form>
+        </div>
+    </section>
+    <div id="body">
+        <section id="about">
+            <div class="everything">
+                <article id="about_us">
+                    <h2 class="bebold">About us</h2>
+                    <p>Codhak Pro is a focused web design studio helping startups and local businesses establish a professional, high-converting online presence. We combine thoughtful visual design with pragmatic development so your website looks great and turns visitors into customers.</p>
+                    <p><b>How we work:</b> we start with a short discovery call to understand your goals, followed by wireframes and a visual
+                        design phase so you can review the look before development begins. After launch we provide training, analytics, and
+                        optional managed maintenance.</p>
+                    <div class="dark">
+                        <h4 style="margin-top:0;">Why clients choose us</h4>
+                        <p>Clear communication, punctual delivery, and solutions that grow with your business. We prioritize measurable results and make sure the website supports your key business goals.</p>
+                        
+                        <p>What you receive: a responsive website built for speed and accessibility, basic on-page SEO setup, easy-to-edit
+                            content (CMS or static), and a secure hosting option with daily backups.</p>
+                    </div>
+                </article>
+                <div id="new">
+                    <aside id="sidebar">
+                        <div class="dark">
+                            <h3>What We Do</h3>
+                            <p>We build responsive websites, provide managed hosting, ongoing support and set up basic SEO so customers can find you online. Our focus is clear communication, fast delivery, and solutions that scale with your business
+                            </p>
+                            <p style="margin-top:8px;">Want a free site review? Use the Get a quote form and we'll follow up.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+    <br>
+    <footer>
+        <p>Codhak pro Web Design, copyright &copy; 2026</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
