@@ -374,7 +374,7 @@ footer{
     }
     header .logo, header #brand{
         padding-top: 10px;
-        font-size: 27px;
+        font-size: 25px;
         }
     #bluring {
         text-align: center;
@@ -402,7 +402,8 @@ footer{
 
     #newsletter form {
         margin: 0 auto;
-        padding-right: 70px;
+        padding: 0 6%;
+        float: none
     }
 
     #newsletter input {
